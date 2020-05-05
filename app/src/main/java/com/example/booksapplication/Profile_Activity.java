@@ -94,7 +94,7 @@ public class Profile_Activity extends AppCompatActivity
 
 
         def();
-        //Picasso.with(Profile_Activity.this).load(imagUrl).fit().centerCrop().into(imageView);
+        //Picasso.with(Profile_Activity.this).load(imagUrl).fit().centerCrop().into(imageView);vkgvghvkv
 
 
         imageView.setOnClickListener(new View.OnClickListener() {
