@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/colorBlue"
+    tools:context=".Add_Book">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_add_book_name"
+        android:text="Name Book"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_add_book_name"
+        android:hint="name book"
+        android:layout_below="@id/txt_add_book_name"
+        android:layout_margin="10dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_add_book_type"
+        android:text="Type Book"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edt_add_book_name"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_add_book_type"
+        android:hint="type book"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/txt_add_book_type"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_add_book_describe"
+        android:text="Describe Book "
+        android:layout_below="@id/edt_add_book_type"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_add_book_describe"
+        android:hint="type book"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/txt_add_book_describe"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_add_bookTo_communicate"
+        android:text="To_communicate "
+        android:layout_below="@id/edt_add_book_describe"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_To_communicate"
+        android:hint="type book"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/txt_add_bookTo_communicate"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_addBook"
+        android:text="ADD"
+        android:layout_below="@id/edt_To_communicate"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

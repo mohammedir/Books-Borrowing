@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Profile_Activity"
+    tools:showIn="@layout/app_bar_profile_">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/imageView_bak"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#109BE2" />
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/imageView_bak"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"
+
+            android:src="@drawable/profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_Name_profile"
+                android:layout_marginTop="50dp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_below="@id/img_profile"
+                android:layout_marginStart="15dp"
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:id="@+id/txt_userName"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="25dp"
+                android:textSize="20dp"
+                android:layout_toRightOf="@id/txt_Name_profile"
+                android:layout_below="@id/img_profile"
+                />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_emil_profile"
+            android:layout_marginTop="50dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_below="@id/txt_Name_profile"
+            android:layout_marginStart="15dp"
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:id="@+id/txt_emil"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/txt_Name_profile"
+            android:layout_below="@id/txt_Name_profile"
+            />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
