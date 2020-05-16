@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth ;
     private EditText editText_email , editText_password ;
     private Button btn_Login ;
-    private ImageButton btn_register ;
+    private Button btn_register ;
     private ProgressDialog progressDialog_main ;
     private FirebaseAuth.AuthStateListener mListener ;
 
@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() != null){
 
-                    Toast.makeText(MainActivity.this,"Now you are logged In "+firebaseAuth.getCurrentUser().getUid(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Now you are logged In "+firebaseAuth.getCurrentUser().getUid(),
+                            Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(MainActivity.this,Profile_Activity.class);
                     startActivity(intent);
                     finish();
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         editText_email = findViewById(R.id.etUsername);
         editText_password = findViewById(R.id.etPassword);
         btn_Login = findViewById(R.id.btLogin);
-        btn_register = findViewById(R.id.btRegister);
+        btn_register = findViewById(R.id.btn_sign_up);
         progressDialog_main = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
     }

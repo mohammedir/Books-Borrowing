@@ -6,7 +6,8 @@ import android.widget.ImageView;
 
 public class Model_Book implements Parcelable {
 
-    public String id , name_book , type_book  , describe ,communicate,user_id;
+    public String id , name_book , type_book  , describe ,communicate,user_id,availability
+            ;
     public ImageView imageView ;
 
 
@@ -28,13 +29,15 @@ public class Model_Book implements Parcelable {
 
     }
 
-    public Model_Book(String name_book , String type_book , String describe ,String communicate, String user_id ,String id){
+    public Model_Book(String name_book , String type_book , String describe ,String communicate,
+                      String user_id ,String id,String availability){
         this.name_book = name_book ;
         this.type_book = type_book ;
         this.describe  = describe ;
         this.user_id = user_id;
         this.id = id;
         this.communicate = communicate ;
+        this.availability = availability ;
 
     }
 
@@ -45,6 +48,8 @@ public class Model_Book implements Parcelable {
         describe = in.readString();
         user_id = in.readString();
         communicate = in.readString();
+        availability = in.readString();
+
     }
 
     @Override
@@ -55,6 +60,8 @@ public class Model_Book implements Parcelable {
         dest.writeString(describe);
         dest.writeString(user_id);
         dest.writeString(communicate);
+        dest.writeString(availability);
+
     }
 
     @Override
@@ -129,6 +136,14 @@ public class Model_Book implements Parcelable {
 
     public void setCommunicate(String communicate) {
         this.communicate = communicate;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 
     @Override

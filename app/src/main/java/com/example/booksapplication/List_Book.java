@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,6 +58,9 @@ public class List_Book extends AppCompatActivity {
             }
         });
 
+        Toolbar toolbar = findViewById(R.id.toolbar_list);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("my book");
 
         recyclerView.setHasFixedSize(true);
 
@@ -150,14 +154,7 @@ public class List_Book extends AppCompatActivity {
     }
 
 
-    private void def(){
 
-        recyclerView = findViewById(R.id.recyView_list);
-        fab =  findViewById(R.id.fab);
-        mAuth = FirebaseAuth.getInstance();
-        deletbutton = findViewById(R.id.delet_book);
-
-    }
     private void delet(){
 
         databaseReference.removeEventListener(new ValueEventListener() {
@@ -185,6 +182,14 @@ public class List_Book extends AppCompatActivity {
 
             }
         });
+
+    }
+    private void def(){
+
+        recyclerView = findViewById(R.id.recyView_list);
+        fab =  findViewById(R.id.fab);
+        mAuth = FirebaseAuth.getInstance();
+        deletbutton = findViewById(R.id.delet_book);
 
     }
 

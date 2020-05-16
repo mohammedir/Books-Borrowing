@@ -111,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
-                        android:text="Username"
+                        android:text="Email"
                         android:textColor="@color/colorPurple"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -123,7 +123,7 @@
                         android:layout_below="@+id/tvUsername"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:drawableRight="@drawable/ic_action_pass"
+                        android:drawableRight="@drawable/ic_email_black_24dp"
                         android:drawablePadding="30dp"
                         android:inputType="text"
                         android:padding="10dp" />
@@ -171,7 +171,9 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@drawable/circle"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:visibility="gone"
+                    />
             </RelativeLayout>
 
             <RelativeLayout
@@ -183,7 +185,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="35dp"
                 android:layout_marginRight="35dp"
-                android:layout_marginBottom="-20dp"
+                android:layout_marginBottom="-30dp"
                 android:elevation="10dp">
 
                 <Button
@@ -209,19 +211,19 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btFacebook"
+                android:id="@+id/btn_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvForgot"
                 android:layout_alignLeft="@+id/cv"
                 android:layout_alignRight="@+id/cv"
                 android:layout_margin="10dp"
-                android:background="@drawable/bt_uiborder"
-                android:drawableLeft="@drawable/ic_action_pass"
+                android:background="@drawable/bt_uisquare"
+                android:drawableLeft="@drawable/ic_add"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="Login with facebook"
-                android:textColor="@color/colorPurple" />
+                android:text=" Create an account "
+                android:textColor="@color/colorWhite" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,32 +45,28 @@ import java.lang.ref.Reference;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Profile_Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseAuth.AuthStateListener mListener ;
     private FirebaseAuth mAuth ;
-    private Button btn_Logout ;
     private int CAMERA_REQUEST_CODE = 0 ;
     private ProgressDialog progressDialog_profile ;
     private StorageReference storageReference ;
-    private ImageView imageView ;
+    private CircleImageView imageView ;
     private TextView textView_Name ,textView_emil , nav_header_profile ;
     Uri uri ;
     String imagUrl;
+
     private DatabaseReference databaseReference ;
     TextView tvEmail,tvName;
 
 
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mListener);
 
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +91,7 @@ public class Profile_Activity extends AppCompatActivity
 
 
         def();
-        //Picasso.with(Profile_Activity.this).load(imagUrl).fit().centerCrop().into(imageView);vkgvghvkv
+        //Picasso.with(Profile_Activity.this).load(imagUrl).fit().centerCrop().into(imageView);
 
 
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +123,7 @@ public class Profile_Activity extends AppCompatActivity
                             textView_Name.setText(dataSnapshot.child("name").getValue().toString());
                             textView_emil.setText(dataSnapshot.child("emil").getValue().toString());
                             imagUrl = dataSnapshot.child("image").getValue().toString();
+
                             if (dataSnapshot.child("emil").getValue().toString() != null ){
                                 tvEmail.setText(dataSnapshot.child("emil").getValue().toString());
                             }
@@ -152,6 +150,16 @@ public class Profile_Activity extends AppCompatActivity
             }
         };
 
+
+
+
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+        mAuth.addAuthStateListener(mListener);
 
     }
 
@@ -180,7 +188,7 @@ public class Profile_Activity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_Edite) {
             return true;
         }
 

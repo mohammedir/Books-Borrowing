@@ -7,7 +7,7 @@
     app:cardCornerRadius="20dp"
     app:cardElevation="8dp"
     android:padding="15dp"
-    android:id="@+id/book_card"
+    android:id="@+id/ALLbook_card"
     android:layout_marginTop="15dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
@@ -19,106 +19,88 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="10dp"
-
+        android:orientation="horizontal"
+        android:padding="15dp"
 
         >
 
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="178dp"
             android:src="@drawable/man" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="Name Book"
                 android:textSize="20dp"
-                android:layout_marginTop="20dp"
+                android:visibility="gone"
 
                 />
 
             <TextView
+                android:id="@+id/text_nameBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_nameBook"
-                android:text="safasfasfasf"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
-                />
-        </LinearLayout>
+                android:text="safasfasfasf" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Type"
                 android:textSize="20dp"
+                android:visibility="gone"
 
                 />
+
             <TextView
+                android:id="@+id/TypeBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/TypeBook"
-                android:layout_marginStart="20dp"
-                android:text="sdfsdbf"
-                />
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="sdfsdbf" />
 
 
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="To communicate"
                 android:textSize="20dp"
+                android:visibility="gone"
 
                 />
+
             <TextView
+                android:id="@+id/txt_allbookcard_To_communicate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/txt_allbookcard_To_communicate"
-                android:layout_marginStart="20dp"
-                android:text="sdfsdbf"
+                android:text="sdfsdbf" />
+
+
+            <ImageView
+                android:id="@+id/go_to_chate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_send_black_24dp"
+
+
                 />
-
-
-
-
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="end"
-            android:src="@drawable/chate"
-            android:layout_marginEnd="10dp"
-
-
-
-            />
 
     </LinearLayout>
 

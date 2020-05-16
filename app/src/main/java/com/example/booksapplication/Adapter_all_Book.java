@@ -2,6 +2,7 @@ package com.example.booksapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -51,6 +52,19 @@ public class Adapter_all_Book extends RecyclerView.Adapter<Adapter_all_Book.ALLV
 
                 }
             });
+            holder.go_to_messageActivity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext,MessageActivity.class);
+                    intent.putExtra("userid",ld.getUser_id());
+                    mContext.startActivity(intent);
+                }
+            });
+
+
+            if ( ld.getAvailability().equals("Unavailable")){
+                holder.bookCard.setCardBackgroundColor(Color.RED);
+            }
       /*  holder.bookCard.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -85,15 +99,15 @@ public class Adapter_all_Book extends RecyclerView.Adapter<Adapter_all_Book.ALLV
         public class ALLViewHolder extends RecyclerView.ViewHolder {
             private TextView bookname, booktype,commencat;
             private CardView bookCard;
-            private ImageView deletImage;
+            private ImageView   go_to_messageActivity;
 
             public ALLViewHolder(View itemView) {
                 super(itemView);
-                bookCard = itemView.findViewById(R.id.book_card);
+                bookCard = itemView.findViewById(R.id.ALLbook_card);
                 bookname = itemView.findViewById(R.id.text_nameBook);
                 booktype = itemView.findViewById(R.id.TypeBook);
-                deletImage = itemView.findViewById(R.id.delet_book);
                 commencat = itemView.findViewById(R.id.txt_allbookcard_To_communicate);
+                go_to_messageActivity = itemView.findViewById(R.id.go_to_chate);
             }
         }
     }

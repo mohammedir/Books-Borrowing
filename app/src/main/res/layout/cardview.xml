@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="20dp"
     app:cardElevation="8dp"
-    android:padding="15dp"
     android:id="@+id/book_card"
     android:layout_marginTop="15dp"
     android:layout_marginStart="10dp"
@@ -14,105 +13,126 @@
     >
 
 
-    <ImageView
-        android:id="@+id/delet_book"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="end"
-        android:padding="15dp"
-        app:srcCompat="@drawable/ic_delete_black_24dp"
 
-        />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="10dp"
-
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/TopLiner_cardview"
+        android:padding="15dp"
         >
 
 
-
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/man"
-            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="178dp"
+            android:src="@drawable/profile"
             />
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_height="178dp"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name Book"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Name Book"
+                android:textSize="20dp"
+                android:visibility="gone"
 
-            />
+                />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:id="@+id/text_nameBook"
-             android:text="safasfasfasf"
-             android:layout_marginTop="20dp"
-             android:layout_marginStart="20dp"
-             />
-        </LinearLayout>
+            <TextView
+                android:id="@+id/text_nameBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="safasfasfasf" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Type"
                 android:textSize="20dp"
+                android:visibility="gone" />
 
-                />
             <TextView
+                android:id="@+id/TypeBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/TypeBook"
                 android:layout_marginStart="20dp"
-                android:text="sdfsdbf"
-                />
+                android:text="sdfsdbf" />
 
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="To communicate"
                 android:textSize="20dp"
+                android:visibility="gone"
 
                 />
+
             <TextView
+                android:id="@+id/book_card_txt_To_communicate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/book_card_txt_To_communicate"
                 android:layout_marginStart="20dp"
                 android:text="sdfsdbf"
-                />
+                android:visibility="gone" />
 
+            <Switch
+                android:id="@+id/switch_listbook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textOff="Off"
+                android:textOn="On"
+                android:checked="false"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+
+                <ImageView
+                    android:id="@+id/updata"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_system_update_black_24dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/delet_book"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_marginLeft="15dp"
+
+                    android:padding="15dp"
+
+
+                    app:srcCompat="@drawable/ic_delete_black_24dp"
+
+                    />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -120,6 +140,13 @@
 
 
 
+
+
+
+
     </LinearLayout>
+
+
+
 
 </android.support.v7.widget.CardView>

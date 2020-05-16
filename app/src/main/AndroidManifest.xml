@@ -12,9 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowAllBooks"
-                  android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
+        <activity android:name=".UpDate"></activity>
+        <activity android:name=".MessageActivity" />
+        <activity
+            android:name=".ShowAllBooks"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Profile_Activity"
             android:label="@string/title_activity_profile_"
@@ -23,9 +25,9 @@
             android:name=".BookDetailsActivity"
             android:label="@string/title_activity_book_details"
             android:theme="@style/AppTheme.FullScreen" />
-        <activity android:name=".Add_Book"
-                  android:theme="@style/AppTheme.NoActionBar"
-            />
+        <activity
+            android:name=".Add_Book"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".List_Book"
             android:theme="@style/AppTheme.FullScreen" />
